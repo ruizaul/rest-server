@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const dbConnection = () => {
   try {
-    mongoose.connect(process.env.MONGODB_CNN);
+    mongoose.connect(process.env.MONGODB_URI);
 
     console.log('Base de datos online');
   } catch (error) {
