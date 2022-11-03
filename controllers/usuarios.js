@@ -18,7 +18,7 @@ const usuariosGet = async (req = request, res = response) => {
 
 const usuarioGet = async (req = request, res = response) => {
   const { id } = req.params;
-  const usuario = await Usuario.find({ _id: id, estado: true });
+  const usuario = await Usuario.findById({ _id: id, estado: true });
 
   res.json(usuario);
 };
